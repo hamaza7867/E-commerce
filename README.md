@@ -60,8 +60,7 @@ You only need a modern web browser (e.g., Chrome, Firefox, Edge, Safari) to view
 Installation
 Clone the repository:
 
-git clone https://github.com/hamaza7867/ecommerce-store.git
-
+git clone https://github.com/hamaza7867/E-commerce.git
 (This command will create a local copy of the repository.)
 
 Navigate to the project directory:
@@ -134,12 +133,13 @@ This project is licensed under the MIT License. See the LICENSE.md file for full
 📧 Contact
 For any questions, feedback, or collaboration opportunities, feel free to reach out:
 
-Email: info@ecommerce.pk
+Email: hamaza7867@gmail.com
 
 Phone: +92 304 8898000
 
 GitHub: hamaza7867
 
-LinkedIn: [Your LinkedIn Profile URL] (Optional, but recommended for freelancers)
+LinkedIn: https://www.linkedin.com/in/ali-hamza-akbar
+Tweeter/X: https://x.com/Hamza8898000
 
 Freelance Web Developer
