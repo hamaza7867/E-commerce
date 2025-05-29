@@ -454,7 +454,7 @@ footer {
 
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     /* Header adjustments for small screens */
     header nav ul {
         flex-direction: column; /* Stack navigation items vertically */
