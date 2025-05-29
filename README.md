@@ -2,7 +2,7 @@ E-commerce Store
 This is a simple, responsive e-commerce website built using HTML, CSS, and JavaScript. It features a product catalog, a shopping cart, user authentication pages, and various informational pages. Designed with a clean, modern aesthetic, it provides a seamless shopping experience across different devices.
 
 ✨ Live Demo
-[Link to your live demo here (e.g., GitHub Pages URL)]
+https://hamaza7867.github.io/E-commerce/
 
 🚀 Features
 Product Catalog: Browse a variety of products with detailed information and pricing.
