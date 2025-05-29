@@ -82,46 +82,31 @@ ecommerce-store/
 <br>
 ├── catalog.html          # Product catalog page - Lists all available products
 <br>
-
 ├── cart.html             # Shopping cart page - Displays selected items for purchase
 <br>
-
 ├── sign.html             # Sign In page - For existing users to log in
 <br>
-
 ├── register.html         # Registration page - For new users to create an account
 <br>
-
 ├── payment.html          # Payment processing page - Simulates checkout
 <br>
-
 ├── about.html            # About Us page - Information about the store
 <br>
-
 ├── contact.html          # Contact Us page - Form and details to reach out
 <br>
-
 ├── privacy.html          # Privacy Policy page - Details on data handling
 <br>
-
 ├── terms.html            # Terms of Service page - Legal terms and conditions
 <br>
-
 ├── style.css             # Main stylesheet - Contains all global and page-specific CSS
 <br>
-
 ├── script.js             # Main JavaScript file - Handles all client-side logic and interactions
 <br>
-
 └── assets/               # Directory for static assets (images, etc.)
-<br>
-
     ├── 1.webp
     <br>
-
     ├── 2.png
     <br>
-
     └── ... (other product images used throughout the site)
 <br>
 
