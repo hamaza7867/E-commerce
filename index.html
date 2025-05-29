@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>e-commerce | store</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Product Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </div>
+                <div class="nav-right">
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="assets/1.webp" alt="Promotional banner for an e-commerce store showcasing a variety of products including electronics and fashion." loading="lazy">
+        <h1>Welcome to our store!</h1>
+        <h2>Here you find everything as you need</h2>
+        <a href="catalog.html" class="hero-button">Shop Now!</a>
+
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card" data-name="Fancy Gadget Pro" data-price="110000" data-image="assets/2.png">
+                <img src="assets/2.png" alt="Fancy Gadget Pro, a sleek electronic device">
+                <h4>Fancy Gadget Pro</h4>
+                <div class="price">Rs. 110,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Ultra Comfy Shoes" data-price="12500" data-image="assets/3.webp">
+                <img src="assets/3.webp" alt="Pair of comfortable, modern running shoes">
+                <h4>Ultra Comfy Shoes</h4>
+                <div class="price">Rs. 12,500</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Smartwatch X200" data-price="35000" data-image="assets/4.webp">
+                <img src="assets/4.webp" alt="Sleek black smartwatch with a digital display">
+                <h4>Smartwatch X200</h4>
+                <div class="price">Rs. 35,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Wireless Headphones" data-price="18000" data-image="assets/5.webp">
+                <img src="assets/5.webp" alt="Over-ear wireless headphones in black">
+                <h4>Wireless Headphones</h4>
+                <div class="price">Rs. 18,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Ergonomic Keyboard" data-price="15000" data-image="assets/6.jpg">
+                <img src="assets/6.jpg" alt="Ergonomic keyboard with a modern design">
+                <h4>Ergonomic Keyboard</h4>
+                <div class="price">Rs. 15,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Gaming Mouse" data-price="8500" data-image="assets/7.jpg">
+                <img src="assets/7.jpg" alt="High-performance gaming mouse with LED lighting">
+                <h4>Gaming Mouse</h4>
+                <div class="price">Rs. 8,500</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Portable Speaker" data-price="9500" data-image="assets/8.webp">
+                <img src="assets/8.webp" alt="Compact portable speaker in black">
+                <h4>Portable Speaker</h4>
+                <div class="price">Rs. 9,500</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="External Hard Drive" data-price="17000" data-image="assets/9.jpg">
+                <img src="assets/9.jpg" alt="Sleek silver external hard drive">
+                <h4>External Hard Drive</h4>
+                <div class="price">Rs. 17,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Webcam HD" data-price="7500" data-image="assets/10.jpg">
+                <img src="assets/10.jpg" alt="HD webcam for video calls and streaming">
+                <h4>Webcam HD</h4>
+                <div class="price">Rs. 7,500</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Noise Cancelling Earbuds" data-price="25000" data-image="assets/11.webp">
+                <img src="assets/11.webp" alt="Compact noise cancelling earbuds with charging case">
+                <h4>Noise Cancelling Earbuds</h4>
+                <div class="price">Rs. 25,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Smart Home Hub" data-price="20000" data-image="assets/12.jpeg">
+                <img src="assets/12.jpeg" alt="Smart home hub device for controlling smart devices">
+                <h4>Smart Home Hub</h4>
+                <div class="price">Rs. 20,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Robot Vacuum" data-price="60000" data-image="assets/13.jpg">
+                <img src="assets/13.jpg" alt="White robot vacuum cleaner for automated cleaning">
+                <h4>Robot Vacuum</h4>
+                <div class="price">Rs. 60,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Air Fryer" data-price="25000" data-image="assets/14.jpg">
+                <img src="assets/14.jpg" alt="Modern black air fryer for healthy cooking">
+                <h4>Air Fryer</h4>
+                <div class="price">Rs. 25,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Coffee Maker" data-price="10000" data-image="assets/15.jpg">
+                <img src="assets/15.jpg" alt="Stainless steel coffee maker with a glass carafe">
+                <h4>Coffee Maker</h4>
+                <div class="price">Rs. 10,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Blender Pro" data-price="14000" data-image="assets/16.jpg">
+                <img src="assets/16.jpg" alt="High-speed blender with a large pitcher">
+                <h4>Blender Pro</h4>
+                <div class="price">Rs. 14,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Toaster Oven" data-price="9000" data-image="assets/17.jpg">
+                <img src="assets/17.jpg" alt="Compact toaster oven with multiple functions">
+                <h4>Toaster Oven</h4>
+                <div class="price">Rs. 9,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Electric Kettle" data-price="4500" data-image="assets/18.jpg">
+                <img src="assets/18.jpg" alt="Sleek electric kettle with a stainless steel finish">
+                <h4>Electric Kettle</h4>
+                <div class="price">Rs. 4,500</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Handheld Vacuum" data-price="8000" data-image="assets/19.jpg">
+                <img src="assets/19.jpg" alt="Lightweight handheld vacuum cleaner">
+                <h4>Handheld Vacuum</h4>
+                <div class="price">Rs. 8,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Steam Iron" data-price="6000" data-image="assets/20.jpg">
+                <img src="assets/20.jpg" alt="Modern steam iron for wrinkle-free clothes">
+                <h4>Steam Iron</h4>
+                <div class="price">Rs. 6,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Food Processor" data-price="28000" data-image="assets/21.jpg">
+                <img src="assets/21.jpg" alt="Versatile food processor with multiple attachments">
+                <h4>Food Processor</h4>
+                <div class="price">Rs. 28,000</div>
+                <div class="button-group">
+                    <button type="button" class="shop-now">Shop Now</button>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h4>About Our Store</h4>
+                <p>Your one-stop shop for quality products. We strive to bring you the best items at competitive prices, ensuring a seamless shopping experience.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Product Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+               <p>Pop Corn Studio, Main Street, Gulberg III,</p>
+                <p>Lahore, Punjab, Pakistan</p>
+                <p>Phone: +92 304 8898000</p>
+                <p>Email: info@ecommerce.pk</p>
+            </div>
+            <div class="footer-section newsletter-search">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to our newsletter for exclusive offers and updates!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Enter your email for newsletter" id="newsletter-email">
+                    <button type="button" class="subscribe-button" id="subscribe-button">Subscribe</button>
+                </div>
+                <p class="search-label">Or search for products:</p>
+                <div class="search-form">
+                    <input type="text" placeholder="Search products..." aria-label="Search for products" id="search-input">
+                    <button type="button" class="search-button" id="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 E-commerce Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

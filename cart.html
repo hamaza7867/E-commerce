@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Your Cart | e-commerce store</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Product Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </div>
+                <div class="nav-right">
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Shopping Cart</h1>
+        <div id="cart-contents" class="cart-container">
+            </div>
+        <div id="checkout-section">
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h4>About Our Store</h4>
+                <p>Your one-stop shop for quality products. We strive to bring you the best items at competitive prices, ensuring a seamless shopping experience.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Product Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>Pop Corn Studio, Main Street, Gulberg III,</p>
+                <p>Lahore, Punjab, Pakistan</p>
+                <p>Phone: +92 304 8898000</p>
+                <p>Email: info@ecommerce.pk</p>
+            </div>
+            <div class="footer-section newsletter-search">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to our newsletter for exclusive offers and updates!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Enter your email for newsletter" id="newsletter-email">
+                    <button type="button" class="subscribe-button" id="subscribe-button">Subscribe</button>
+                </div>
+                <p class="search-label">Or search for products:</p>
+                <div class="search-form">
+                    <input type="text" placeholder="Search products..." aria-label="Search for products" id="search-input">
+                    <button type="button" class="search-button" id="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 E-commerce Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // This script block is specific to cart.html to render and manage cart items.
+        // It uses functions (getCart, saveCart, updateCartCount) defined in script.js.
+
+        // Function to modify item quantity in the cart
+        function modifyItemQuantity(productName, amount) {
+            let cart = getCart();
+            const item = cart.find(p => p.name === productName);
+
+            if (item) {
+                item.quantity += amount; // Add or remove the amount
+                if (item.quantity <= 0) {
+                    // If quantity is 0 or less, remove the item from the cart
+                    cart = cart.filter(p => p.name !== productName);
+                }
+                saveCart(cart);
+                renderCartPage(); // Re-render the entire cart page
+            }
+        }
+
+        // Function to completely remove an item from the cart
+        function removeAllFromCart(productName) {
+            let cart = getCart();
+            cart = cart.filter(item => item.name !== productName);
+            saveCart(cart);
+            renderCartPage();
+        }
+
+        // Main function to render the entire cart page
+        function renderCartPage() {
+            const cart = getCart();
+            const cartContentsDiv = document.getElementById('cart-contents');
+            const checkoutSectionDiv = document.getElementById('checkout-section');
+            cartContentsDiv.innerHTML = ''; // Clear existing content
+            checkoutSectionDiv.innerHTML = ''; // Clear existing content
+
+            if (cart.length === 0) {
+                cartContentsDiv.innerHTML = '<p class="empty-cart-message">Your cart is currently empty. <a href="catalog.html" style="color: #008080; text-decoration: none;">Start shopping now!</a></p>';
+                updateCartCount(); // Ensure header count is 0
+                return;
+            }
+
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const cartItemDiv = document.createElement('div');
+                cartItemDiv.classList.add('cart-item');
+                cartItemDiv.innerHTML = `
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>Price: Rs. ${item.price.toLocaleString('en-PK')}</p>
+                        <p>Total: <strong>Rs. ${itemTotal.toLocaleString('en-PK')}</strong></p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" onclick="modifyItemQuantity('${item.name}', -1)">-</button>
+                            <span class="quantity-display">${item.quantity}</span>
+                            <button class="quantity-btn" onclick="modifyItemQuantity('${item.name}', 1)">+</button>
+                        </div>
+                        <button class="remove-item-btn" onclick="removeAllFromCart('${item.name}')">Remove</button>
+                    </div>
+                `;
+                cartContentsDiv.appendChild(cartItemDiv);
+            });
+
+            // Render summary and checkout button
+            checkoutSectionDiv.innerHTML = `
+                <div class="cart-summary">
+                    Total: <span>Rs. ${total.toLocaleString('en-PK')}</span>
+                </div>
+                <div class="checkout-btn-container">
+                    <a href="payment.html" class="checkout-btn">Proceed to Checkout</a>
+                </div>
+            `;
+            
+            updateCartCount(); // Update the cart count in the header
+        }
+
+        // Initial render when the cart page loads
+        document.addEventListener('DOMContentLoaded', renderCartPage);
+    </script>
+</body>
+</html>

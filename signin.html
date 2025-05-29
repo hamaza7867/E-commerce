@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sign In | e-commerce store</title>
+    <style>
+        /* Specific styles for the sign-in form */
+        .signin-form-container {
+            max-width: 450px;
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #333;
+            text-align: left;
+        }
+
+        .signin-form-container h2 {
+            text-align: center;
+            color: #008080; /* Teal heading */
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in element's total width */
+        }
+
+        .signin-btn {
+            background-color: #008080; /* Teal for sign in */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .signin-btn:hover {
+            background-color: #00695c; /* Darker teal hover */
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .register-link a {
+            color: #FFB300; /* Golden yellow for register link */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .signin-form-container {
+                padding: 20px;
+                margin: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="nav-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Product Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </div>
+                <div class="nav-right">
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sign In to Your Account</h1>
+        <div class="signin-form-container">
+            <h2>Welcome Back!</h2>
+            <form id="signin-form">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="example@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password"
+                           placeholder="Enter your password"
+                           minlength="8"
+                           maxlength="30"
+                           required>
+                </div>
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+            <p class="register-link">Don't have an account? <a href="register.html">Register Now</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h4>About Our Store</h4>
+                <p>Your one-stop shop for quality products. We strive to bring you the best items at competitive prices, ensuring a seamless shopping experience.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Product Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>Pop Corn Studio, Main Street, Gulberg III,</p>
+                <p>Lahore, Punjab, Pakistan</p>
+                <p>Phone: +92 304 8898000</p>
+                <p>Email: info@ecommerce.pk</p>
+            </div>
+            <div class="footer-section newsletter-search">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to our newsletter for exclusive offers and updates!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Enter your email for newsletter" id="newsletter-email">
+                    <button type="button" class="subscribe-button" id="subscribe-button">Subscribe</button>
+                </div>
+                <p class="search-label">Or search for products:</p>
+                <div class="search-form">
+                    <input type="text" placeholder="Search products..." aria-label="Search for products" id="search-input">
+                    <button type="button" class="search-button" id="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 E-commerce Store. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount(); // Ensure cart count in header is updated
+
+            const signinForm = document.getElementById('signin-form');
+            if (signinForm) {
+                signinForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // In a real application, you'd send email and password to a server for authentication.
+                    // Here, we just simulate a successful sign-in.
+                    alert('Sign In successful! Welcome!');
+                    window.location.href = 'index.html'; // Redirect to home page
+                });
+            }
+        });
+    </script>
+</body>
+</html>
