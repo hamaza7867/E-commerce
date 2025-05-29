@@ -61,6 +61,7 @@ Installation
 Clone the repository:
 
 git clone https://github.com/hamaza7867/E-commerce.git
+<br>
 (This command will create a local copy of the repository.)
 
 Navigate to the project directory:
@@ -72,24 +73,57 @@ Open index.html in your web browser:
 Simply double-click the index.html file in your file explorer, or drag and drop it into your preferred web browser.
 
 📂 File Structure
-ecommerce-store/
-├── index.html            # Homepage - Entry point of the website
-├── catalog.html          # Product catalog page - Lists all available products
-├── cart.html             # Shopping cart page - Displays selected items for purchase
-├── sign.html             # Sign In page - For existing users to log in
-├── register.html         # Registration page - For new users to create an account
-├── payment.html          # Payment processing page - Simulates checkout
-├── about.html            # About Us page - Information about the store
-├── contact.html          # Contact Us page - Form and details to reach out
-├── privacy.html          # Privacy Policy page - Details on data handling
-├── terms.html            # Terms of Service page - Legal terms and conditions
-├── style.css             # Main stylesheet - Contains all global and page-specific CSS
-├── script.js             # Main JavaScript file - Handles all client-side logic and interactions
-└── assets/               # Directory for static assets (images, etc.)
-    ├── 1.webp
-    ├── 2.png
-    └── ... (other product images used throughout the site)
+<br>
 
+ecommerce-store/
+<br>
+
+├── index.html            # Homepage - Entry point of the website
+<br>
+├── catalog.html          # Product catalog page - Lists all available products
+<br>
+
+├── cart.html             # Shopping cart page - Displays selected items for purchase
+<br>
+
+├── sign.html             # Sign In page - For existing users to log in
+<br>
+
+├── register.html         # Registration page - For new users to create an account
+<br>
+
+├── payment.html          # Payment processing page - Simulates checkout
+<br>
+
+├── about.html            # About Us page - Information about the store
+<br>
+
+├── contact.html          # Contact Us page - Form and details to reach out
+<br>
+
+├── privacy.html          # Privacy Policy page - Details on data handling
+<br>
+
+├── terms.html            # Terms of Service page - Legal terms and conditions
+<br>
+
+├── style.css             # Main stylesheet - Contains all global and page-specific CSS
+<br>
+
+├── script.js             # Main JavaScript file - Handles all client-side logic and interactions
+<br>
+
+└── assets/               # Directory for static assets (images, etc.)
+<br>
+
+    ├── 1.webp
+    <br>
+
+    ├── 2.png
+    <br>
+
+    └── ... (other product images used throughout the site)
+<br>
 
 💡 Usage
 Navigation: Utilize the intuitive header navigation to seamlessly move between different sections of the website.
